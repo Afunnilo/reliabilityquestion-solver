@@ -1,24 +1,12 @@
 function question_one() {
-    let question_type = prompt('What are you looking for? reliability or failure rate');
-    let question_type_lower = question_type.toLowerCase();
-    if (question_type_lower == "reliability") {
-        let hazard_rate = prompt('What is the hazard rate?');
-        let time = prompt('What is the time to failure?')
-        let base = -1 * hazard_rate * time ;
-        let reliability = Math.exp(base);
-        alert("The Reliability is " + reliability)
-        console.log('Reliability = ' + reliability)
-        document.getElementById('answer_one').innerHTML = 'Reliability = ' + reliability;
-    } else if (question_type_lower = "failure_rate") {
-        let hazard_rate = prompt('What is the hazard rate?');
-        let time = prompt('What is the time to failure?')
-        let base = -1 * hazard_rate * time ;
-        let reliability = Math.exp(base)
-        let failure_rate = 1 - reliability;
-       alert('The Failure rate is '+ failure_rate)
-       console.log('Failure Rate = ' + failure_rate)
-       document.getElementById('answer_one').innerHTML = 'Failure Rate = ' + failure_rate
-    }
+    alert("We are looking for the reliability")
+    let hazard_rate = prompt('What is the hazard rate?');
+    let time = prompt('What is the time to failure?')
+    let base = -1 * hazard_rate * time ;
+    let reliability = Math.exp(base);
+    alert("The Reliability is " + reliability)
+    console.log('Reliability = ' + reliability)
+    document.getElementById('answer_one').innerHTML = 'Reliability = ' + reliability;
 }
 
 function question_two(){
@@ -75,7 +63,7 @@ function question_four(){
     let time = natLog * MTTF * -1;
     alert('The time  is ' + time + " x 100 hours")
     console.log("MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate +"," + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time)
-    document.getElementById('answer_four').innerHTML = "MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate +"," + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time + " x 100 hours"
+    document.getElementById('answer_four').innerHTML = "MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate  + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time + " x 100 hours"
 
 }
     else {
