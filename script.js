@@ -44,8 +44,8 @@ function question_three(){
 }
 
 function question_four(){
+    alert("This is a parallel system")
     let n = parseFloat(prompt('How many components are there?'));
-    if (n ==  5) {
     let ft1 = parseFloat(prompt('Enter the failure time of component 1'));
     let ft2 = parseFloat(prompt('Enter the failure time of component 2'));
     let ft3 = parseFloat(prompt('Enter the failure time of component 3'));
@@ -68,10 +68,9 @@ function question_four(){
     console.log("MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate +"," + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time)
     document.getElementById('answer_four').innerHTML = "MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate  + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time + " x 100 hours"
 
-}
-    else {
-        alert('Try again')
-    }
+
+   
+    
 } 
 
 function question_five(){
