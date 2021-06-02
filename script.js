@@ -1,8 +1,8 @@
 function question_one() {
     alert("We are looking for the reliability")
-    let hazard_rate = prompt('What is the hazard rate?');
+    let failure_rate = prompt('What is the failure rate?');
     let time = prompt('What is the time to failure?')
-    let base = -1 * hazard_rate * time ;
+    let base = -1 * failure_rate * time ;
     let reliability = Math.exp(base);
     alert("The Reliability is " + reliability)
     console.log('Reliability = ' + reliability)
@@ -12,12 +12,15 @@ function question_one() {
 function question_two(){
 
     let question_type = alert("We are looking for reliability at 50 hours.")
-        let hazard_rate = prompt('What is the hazard rate?');
+    let n = parseFloat(prompt('What is the number of subsystems'))
+        let failure_rate = prompt('What is the failure rate of each subsystem?');
         let time = prompt('What is the time to failure?')
-        let base = -1 * hazard_rate * time ;
+        let failure_rate_total = n * failure_rate
+
+        let base = -1 * failure_rate_total * time ;
         let reliability = Math.exp(base);
         alert("The Reliability is " + reliability)
-        let MTTF = 1 / hazard_rate
+        let MTTF = 1 / failure_rate_total
         alert("The mean time to failure is "+ MTTF + "hours");
         console.log('Reliability = ' + reliability + " and MTTF = " + MTTF + " hours");
         document.getElementById('answer_two').innerHTML = 'Reliability = ' + reliability + " and MTTF = " + MTTF + " hours"
