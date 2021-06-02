@@ -1,5 +1,12 @@
+body, html{
+    margin: 0;
+    background-color:lightblue;
+}
+
 .container{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:lightblue;
+  
     
 }
 
@@ -11,8 +18,16 @@
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    border: 2px solid black;
+    border: 2px solid #002D62;
+    background-color: #89CFF0;
 }
 .head{
     text-align: center;
+}
+
+button{
+    padding: 10px 30px;
+    background-color: lightblue;
+    border: 2px solid #00BFFF;
+    border-radius: 3px;
 }
