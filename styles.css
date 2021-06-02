@@ -1,0 +1,18 @@
+.container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.question-head{
+    font-weight: 700;
+}
+
+.question{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+.head{
+    text-align: center;
+}
