@@ -2,35 +2,37 @@ function question_one() {
     let question_type = prompt('What are you looking for? reliability or failure rate');
     let question_type_lower = question_type.toLowerCase();
     if (question_type_lower == "reliability") {
-        let hazard_rate = prompt('what is the hazard rate?');
-        let time = prompt('what is the time to failure?')
+        let hazard_rate = prompt('What is the hazard rate?');
+        let time = prompt('What is the time to failure?')
         let base = -1 * hazard_rate * time ;
         let reliability = Math.exp(base);
-        alert("The reliability is " + reliability)
+        alert("The Reliability is " + reliability)
         console.log('Reliability = ' + reliability)
-        
+        document.getElementById('answer_one').innerHTML = 'Reliability = ' + reliability;
     } else if (question_type_lower = "failure_rate") {
-        let hazard_rate = prompt('what is the hazard rate?');
-        let time = prompt('what is the time to failure?')
+        let hazard_rate = prompt('What is the hazard rate?');
+        let time = prompt('What is the time to failure?')
         let base = -1 * hazard_rate * time ;
         let reliability = Math.exp(base)
         let failure_rate = 1 - reliability;
        alert('The Failure rate is '+ failure_rate)
        console.log('Failure Rate = ' + failure_rate)
+       document.getElementById('answer_one').innerHTML = 'Failure Rate = ' + failure_rate
     }
 }
 
 function question_two(){
 
     let question_type = alert("We are looking for reliability at 50 hours.")
-        let hazard_rate = prompt('what is the hazard rate?');
-        let time = prompt('what is the time to failure?')
+        let hazard_rate = prompt('What is the hazard rate?');
+        let time = prompt('What is the time to failure?')
         let base = -1 * hazard_rate * time ;
         let reliability = Math.exp(base);
-        alert("The reliability is " + reliability)
+        alert("The Reliability is " + reliability)
         let MTTF = 1 / hazard_rate
         alert("The mean time to failure is "+ MTTF + "hours");
-        console.log('Reliability = ' + reliability + " and MTTF = " + MTTF + " hours")
+        console.log('Reliability = ' + reliability + " and MTTF = " + MTTF + " hours");
+        document.getElementById('answer_two').innerHTML = 'Reliability = ' + reliability + " and MTTF = " + MTTF + " hours"
         
 
 }
@@ -42,7 +44,9 @@ function question_three(){
     let p = prompt('What is the probability of each subsystem?')
     let R = 1 - p**n;
     alert('The reliability of the system is '+  R)
-    console.log('Reliability = '+ R) }
+    console.log('Reliability = '+ R);
+    document.getElementById('answer_three').innerHTML = 'The reliability of the system is '+  R
+ }
     else {
         alert('try again')
     }
@@ -71,7 +75,9 @@ function question_four(){
     let time = natLog * MTTF * -1;
     alert('The time  is ' + time + " x 100 hours")
     console.log("MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate +"," + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time)
-    }
+    document.getElementById('answer_four').innerHTML = "MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate +"," + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time + " x 100 hours"
+
+}
     else {
         alert('Try again')
     }
@@ -102,7 +108,7 @@ function question_five(){
     let R = Math.exp(base)
     alert ('The reliability at 4000 cycles is ' + R)
     console.log("MTTF = "+ MTTF + "," + "Failure rate = "+ failure_rate + "," + "t = " + time + " cycles" + ", R(4000) = "+ R)
-
+    document.getElementById('answer_five').innerHTML = "MTTF = "+ MTTF + "," + "Failure rate = "+ failure_rate + "," + "t = " + time + " cycles" + ", R(4000) = "+ R
 }
 
 function question_six(){
@@ -125,6 +131,14 @@ function question_six(){
     let totalProfit = profit - costOfReplacement
     alert('Therefore, the manufacturers expected profit is '+ totalProfit)
     console.log('totalProfit = ' +  totalProfit)
+    document.getElementById('answer_six').innerHTML = 'Therefore, the manufacturers expected profit is '+ totalProfit + " Naira"
 
     
 }
+
+document.getElementById("question_one").onclick = function() {question_one()};
+document.getElementById("question_two").onclick = function() {question_two()};
+document.getElementById("question_three").onclick = function() {question_three()};
+document.getElementById("question_four").onclick = function() {question_four()};
+document.getElementById("question_five").onclick = function() {question_five()};
+document.getElementById("question_six").onclick = function() {question_six()};
