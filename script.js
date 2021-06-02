@@ -29,23 +29,18 @@ function question_two(){
 }
 
 function question_three(){
-    let type = prompt( "Is this a series or parallel arrangement?")
-    if (type == "parallel") {
+    alert('This is a parallel connection')
     let n = prompt('How many subsystems are there?');
     let p = prompt('What is the probability of each subsystem?')
     let R = 1 - p**n;
     alert('The reliability of the system is '+  R)
     console.log('Reliability = '+ R);
     document.getElementById('answer_three').innerHTML = 'The reliability of the system is '+  R
- }
-    else {
-        alert('try again')
-    }
+ 
 }
 
 function question_four(){
-    alert("This is a parallel system")
-    let n = parseFloat(prompt('How many components are there?'));
+    let n = parseFloat(prompt('Enter the number of components'));
     let ft1 = parseFloat(prompt('Enter the failure time of component 1'));
     let ft2 = parseFloat(prompt('Enter the failure time of component 2'));
     let ft3 = parseFloat(prompt('Enter the failure time of component 3'));
@@ -69,8 +64,6 @@ function question_four(){
     document.getElementById('answer_four').innerHTML = "MTTF = "+ MTTF + "," + "Failure rate = " + failure_rate  + " failures per 100 hours" + "," + " Reliability = " + R + " and Time = " + time + " x 100 hours"
 
 
-   
-    
 } 
 
 function question_five(){
